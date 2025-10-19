@@ -1,4 +1,4 @@
-# 📸 Celestial
+# 📸 Stelllar
 
 > A production-ready social media platform showcasing advanced React patterns with Feature-Sliced Design, optimistic updates, and normalized caching.
 
