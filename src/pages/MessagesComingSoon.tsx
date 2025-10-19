@@ -1,6 +1,6 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
-import { ComingSoon } from '@/shared/components/ui/ComingSoon';
+import { ComingSoon } from '@/shared/ui/ComingSoon';
 
 export default function MessagesComingSoon(): React.JSX.Element {
   return (

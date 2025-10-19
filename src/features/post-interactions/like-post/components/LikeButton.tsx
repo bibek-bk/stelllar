@@ -27,7 +27,7 @@ export const LikeButton: React.FC<LikeButtonProps> = ({ postId, isLiked, classNa
   return (
     <button
       onClick={handleClick}
-      className={`flex items-center space-x-1 transition-opacity focus:ring-2 focus:ring-blue-500 focus:outline-none rounded ${className}`}
+      className={`flex items-center space-x-1 transition-opacity focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded ${className}`}
       aria-label={isLiked ? 'Unlike post' : 'Like post'}
       aria-pressed={isLiked}
     >

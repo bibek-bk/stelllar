@@ -1,4 +1,4 @@
-import { supabase } from "@/lib/supabaseClient"
+import { supabase } from "@/shared/config/supabaseClient"
 
 export const likeApi = {
     async insertLike(postId: string, userId: string): Promise<void> {

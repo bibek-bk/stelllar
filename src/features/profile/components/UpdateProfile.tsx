@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Camera, X } from 'lucide-react';
 import { useUpdateProfile } from '@/services/profiles/mutations';
 import { useAuth } from '@/shared/hooks/useAuth';
-import { RouteLoader } from '@/shared/components/ui/RouteLoader';
+import { RouteLoader } from '@/shared/ui/RouteLoader';
 import { uploadAvatar } from '@/api/profile.api';
 import { Button } from '@/design-system/components';
 import { cn } from '@/design-system/utils/cn';
@@ -24,7 +24,7 @@ const UpdateProfile: React.FC<UpdateProfileProps> = ({ onClose }) => {    const 
     const [avatarFile, setAvatarFile] = useState<File | null>(null);
 
     // Update form when profile loads
-    React.useEffect(() => {
+    useEffect(() => {
         if (profile) {
             setFormData({
                 username: profile.username || '',
@@ -36,7 +36,7 @@ const UpdateProfile: React.FC<UpdateProfileProps> = ({ onClose }) => {    const 
     }, [profile]);
 
     // Store the current blob URL to clean it up when changed or unmounted
-    const [currentBlobUrl, setCurrentBlobUrl] = React.useState<string | null>(null);
+    const [currentBlobUrl, setCurrentBlobUrl] = useState<string | null>(null);
 
     // Cleanup blob URL on unmount or when creating a new one
     React.useEffect(() => {
@@ -188,7 +188,7 @@ const UpdateProfile: React.FC<UpdateProfileProps> = ({ onClose }) => {    const 
                             type="button"
                             onClick={onClose}
                             variant="secondary"
-                            className="flex-1"
+                            className="flex-1 disabled:cursor-not-allowed"
                             disabled={isPending}
                         >
                             Cancel
@@ -196,7 +196,7 @@ const UpdateProfile: React.FC<UpdateProfileProps> = ({ onClose }) => {    const 
                         <Button
                             type="submit"
                             variant="primary"
-                            className="flex-1"
+                            className="flex-1 disabled:cursor-not-allowed"
                             disabled={isPending}
                             aria-busy={isPending}
                         >

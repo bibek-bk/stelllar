@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { ToastOptions, Toast, ToastContextValue, ToastContext } from '../../hooks/useToast';
+import { ToastOptions, Toast, ToastContextValue, ToastContext } from '../hooks/useToast';
 
 const MAX_TOASTS = 4;
 const DEFAULT_DURATION = 4000;

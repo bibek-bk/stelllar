@@ -1,7 +1,7 @@
 import { ReduxProvider } from './ReduxProvider';
 import { QueryProvider } from './QueryProvider';
 import { AuthProvider } from './AuthProvider';
-import { ToastProvider } from '@/shared/components/ui/ToastProvider';
+import { ToastProvider } from '@/shared/ui/ToastProvider';
 
 interface AppProvidersProps {
   children: React.ReactNode;

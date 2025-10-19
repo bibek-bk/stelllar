@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useCreatePost, useDeleteImage, useUploadImage } from '@/services/posts/mutations';
-import { supabase } from '@/lib/supabaseClient';
+import { supabase } from '@/shared/config/supabaseClient';
 
 type UploadStage = 'uploading' | 'creating' | 'complete';
 

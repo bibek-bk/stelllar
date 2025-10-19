@@ -77,7 +77,7 @@ const PostsGrid: React.FC<PostsGridProps> = ({ posts, isLoading, className = '' 
         {posts.map((post) => (
           <button 
             key={post.id}
-            className="aspect-square rounded-lg relative group cursor-pointer overflow-hidden bg-[#1F2A36] focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            className="aspect-square rounded-lg relative group cursor-pointer overflow-hidden bg-[#1F2A36] focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
             aria-label={`View post: ${post.caption || 'Image post'}`}
           >
             <img 

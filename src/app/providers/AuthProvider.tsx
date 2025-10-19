@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import { supabase } from '@/lib/supabaseClient';
+import { supabase } from '@/shared/config/supabaseClient';
 import { useAppDispatch } from '../store';
 import { setAuth, clearAuth, setLoading } from '../store/slices/authSlice';
-import { queryClient } from '@/services/queryClient';
+import { queryClient } from '@/shared/config/queryClient';
 
 interface AuthProviderProps {
   children: React.ReactNode;

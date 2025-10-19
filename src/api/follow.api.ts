@@ -1,5 +1,5 @@
 import { Follow, FollowWithProfile } from "@/entities/follow/types"
-import { supabase } from "@/lib/supabaseClient"
+import { supabase } from "@/shared/config/supabaseClient"
 
 
 export const followApi = {

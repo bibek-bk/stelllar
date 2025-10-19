@@ -3,6 +3,7 @@ import { PostCard } from '@/entities/post/ui/PostCard';
 import { SkeletonPost } from '@/entities/post/ui/SkeletonPost';
 import { useGetAllPosts } from '@/services/posts/queries';
 import { useAuth } from '@/shared/hooks/useAuth';
+import { ActionBar } from '@/features/post-interactions/ui/ActionBar';
 
 interface FeedProps {
   className?: string;
@@ -41,8 +42,6 @@ export const Feed: React.FC<FeedProps> = ({ className = '' }) => {
     );
   }
 
-  console.log('Posts with like status:', posts.map(p => ({ id: p.id, isLiked: p.isLiked, like_count: p.like_count })));
-
   return (
     <div className={`py-4 sm:py-6 px-4 sm:px-0 flex flex-col items-center ${className}`}>
       {posts.map((post) => (
@@ -65,9 +64,9 @@ export const Feed: React.FC<FeedProps> = ({ className = '' }) => {
           isLoading={isLoading}
           caption={post.caption}
           likes={post.like_count}
-          isLiked={post.isLiked ?? false}
           isSaved={false}
           timestamp={post.created_at}
+          actionBar={<ActionBar postId={post.id} isLiked={post.isLiked ?? false} />}
         />
       ))}
     </div>

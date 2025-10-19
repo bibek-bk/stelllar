@@ -1,12 +1,10 @@
 
-import { LikeButton } from '@/features/like-post';
+import { LikeButton } from '@/features/post-interactions/like-post';
 import { useHasUserLikedPost } from '@/services/like/queries';
 
 interface ActionBarProps {
   postId: string;
-  
-  isLiked?: boolean;
-  onLike?: () => void;
+  isLiked: boolean;
   className?: string;
 }
 
@@ -15,8 +13,6 @@ export const ActionBar: React.FC<ActionBarProps> = ({
   isLiked,
   className = ''
 }) => {
-  const { data: hasLiked } = useHasUserLikedPost(postId);
-  const effectiveIsLiked = typeof isLiked === 'boolean' ? isLiked : !!hasLiked;
 
   
 
@@ -25,12 +21,12 @@ export const ActionBar: React.FC<ActionBarProps> = ({
     <div className={`flex items-center justify-between py-3 px-4 border-t border-gray-800 ${className}`}>
       <div className="flex items-center gap-6">
         {/* Like Button (service-backed) */}
-        <LikeButton postId={postId} isLiked={effectiveIsLiked}  />
+        <LikeButton postId={postId} isLiked={isLiked}  />
 
 
         {/* Share Button */}
         <button
-          className="flex items-center space-x-1 hover:opacity-70 transition-opacity focus:ring-2 focus:ring-blue-500 focus:outline-none rounded"
+          className="flex items-center space-x-1 hover:opacity-70 transition-opacity focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded"
           aria-label="Share post"
         >
           <svg

@@ -1,5 +1,5 @@
 
-import { supabase } from "@/lib/supabaseClient";
+import { supabase } from "@/shared/config/supabaseClient";
 import type { User, UpdateUserInput } from "@/entities/user/types";
 
 

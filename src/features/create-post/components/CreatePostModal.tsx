@@ -15,7 +15,7 @@ const ImagePreview: React.FC<{ preview: string; onRemove: () => void }> = ({ pre
       <img src={preview} alt="Preview" className="w-full h-full object-cover" />
       <button
         onClick={onRemove}
-        className="absolute top-2 right-2 p-1.5 bg-black/60 hover:bg-black/80 rounded-full text-white transition-colors focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        className="absolute top-2 right-2 p-1.5 bg-black/60 hover:bg-black/80 rounded-full text-white transition-colors focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
         type="button"
         aria-label="Remove image"
       >
@@ -224,9 +224,9 @@ export const CreatePostModal: React.FC<CreatePostModalProps> = ({ isOpen, onClos
               </Button>
               <Button
                 type="submit"
-                disabled={!canSubmit}
+                disabled={!canSubmit || isPending}
                 variant="primary"
-                className="flex-1 flex items-center justify-center gap-2"
+                className="flex-1 flex items-center justify-center gap-2 disabled:cursor-not-allowed"
                 aria-busy={isPending}
               >
                 {isPending ? (

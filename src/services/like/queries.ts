@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { supabase } from '@/lib/supabaseClient';
+import { supabase } from '@/shared/config/supabaseClient';
 import { likeApi } from '@/api/like.api';
 import { likeKeys } from './keys';
 

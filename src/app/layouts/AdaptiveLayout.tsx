@@ -2,8 +2,8 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { useAuth } from '@/shared/hooks/useAuth';
-import { Sidebar } from '@/shared/components/ui/Sidebar';
-import { NavBar } from '@/shared/components/ui/NavBar';
+import { Sidebar } from '@/widgets/navigation/ui/Sidebar';
+import { NavBar } from '@/widgets/navigation/ui/NavBar';
 
 /**
  * Layout that adapts based on authentication state:

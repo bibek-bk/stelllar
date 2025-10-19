@@ -92,7 +92,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
           )}
           <button
             onClick={onClick}
-            className="lg:hidden p-2 hover:bg-gray-800 rounded-full transition-colors focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            className="lg:hidden p-2 hover:bg-gray-800 rounded-full transition-colors focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
             aria-label="Settings"
           >
             <Settings className="w-5 h-5 text-gray-400 hover:text-gray-200" aria-hidden="true" />

@@ -1,4 +1,4 @@
-import { supabase } from '@/lib/supabaseClient';
+import { supabase } from '@/shared/config/supabaseClient';
 
 export interface CreatePostPayload {
   user_id: string;

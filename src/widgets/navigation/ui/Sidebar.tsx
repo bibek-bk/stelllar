@@ -70,7 +70,7 @@ export function Sidebar() {
               onClick={item.onClick}
               aria-label={item.label}
               aria-current={active ? 'page' : undefined}
-              className={`w-full flex items-center space-x-4 px-4 py-3 rounded-xl transition-all duration-200 group cursor-pointer focus:ring-2 focus:ring-blue-500 focus:outline-none ${
+              className={`w-full flex items-center space-x-4 px-4 py-3 rounded-xl transition-all duration-200 group cursor-pointer focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none ${
                 active 
                   ? 'bg-gray-100 dark:bg-gray-900' 
                   : 'bg-transparent hover:bg-gray-100 dark:hover:bg-gray-900'

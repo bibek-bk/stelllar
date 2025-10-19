@@ -1,12 +1,12 @@
 // src/app/routes/router.tsx
 import React, { Suspense, lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import { PublicLayout, AuthenticatedLayout,AdaptiveLayout } from '@/app/layout';
-import { RequireAuth } from '@/shared/components/guards/RequireAuth';
-import { RedirectIfAuthenticated } from '@/shared/components/guards/RedirectIfAuthenticated';
+import { PublicLayout, AuthenticatedLayout,AdaptiveLayout } from '@/app/layouts';
+import { RequireAuth } from '@/shared/guards/RequireAuth';
+import { RedirectIfAuthenticated } from '@/shared/guards/RedirectIfAuthenticated';
 import { RouteErrorBoundary } from './ErrorBoundary';
 import { NotFound } from './NotFound';
-import { RouteLoader } from '@/shared/components/ui/RouteLoader';
+import { RouteLoader } from '@/shared/ui/RouteLoader';
 import { ROUTES } from '@/shared/constants/routes';
 
 // Lazy-loaded pages

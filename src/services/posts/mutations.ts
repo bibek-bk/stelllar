@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { postsApi, type CreatePostPayload, type DbPostRow } from '@/api/posts.api';
-import { supabase } from '@/lib/supabaseClient';
+import { supabase } from '@/shared/config/supabaseClient';
 import { postKeys } from './keys';
 import { useToast } from '@/shared/hooks/useToast';
 import { profileKeys } from '@/services/profiles/keys';

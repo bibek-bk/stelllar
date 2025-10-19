@@ -1,7 +1,6 @@
 import React from 'react';
 import { Avatar } from '@/design-system/components/Avatar/Avatar';
 import { PostMedia } from './PostMedia';
-import { ActionBar } from './ActionBar';
 import { Caption } from './Caption';
 import {
   PostId,
@@ -22,7 +21,8 @@ interface PostCardProps extends PostInteractionHandlers {
   isSaved: boolean;
   timestamp: string;
   className?: string;
-  isLoading:boolean
+  isLoading: boolean;
+  actionBar?: React.ReactNode
 }
 
 export const PostCard: React.FC<PostCardProps> = ({
@@ -33,13 +33,12 @@ export const PostCard: React.FC<PostCardProps> = ({
   likes,
   isLiked,
   className = '',
-  onLike,
   isLoading,
-  timestamp
+  timestamp,
+  actionBar
 
 }) => {
   const navigate = useNavigate();
-  const handleLike = () => onLike?.(id);
   const time = timeAgo(timestamp)
 
   return (
@@ -63,7 +62,7 @@ export const PostCard: React.FC<PostCardProps> = ({
             >
               {user.username}
             </button>
-           
+
 
           </div>
           <p>{time}</p>
@@ -77,20 +76,14 @@ export const PostCard: React.FC<PostCardProps> = ({
             <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
           </svg>
         </button>
-        
+
       </header>
 
       {/* Post Media */}
       <PostMedia media={media} />
 
       {/* Action Bar */}
-      <ActionBar
-        postId={id}
-        
-        isLiked={isLiked}
-        onLike={handleLike}
-      />
-
+      {actionBar}
       {/* Likes Count */}
       {(likes ?? 0) > 0 && (
         <div className="px-4 pb-2">
