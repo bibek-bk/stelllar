@@ -33,7 +33,9 @@ export interface Post {
   likes: number; // keep for compatibility with existing UI
   isLiked: boolean; // keep for compatibility
   likesCount?: number; // new optional alias for service layer
-  likedByUser?: boolean; // new optional alias for service layer
+  likedByUser?: boolean; // new optional alias for service layer2
+
+
   comments: Comment[];
   totalComments: number;
   shares: number;

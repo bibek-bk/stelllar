@@ -1,4 +1,4 @@
-import { Follow, FollowWithProfile } from "@/entities/follow/types"
+import { Follow, FollowWithProfile } from "@/entities/follow/model/types"
 import { supabase } from "@/shared/config/supabaseClient"
 
 

@@ -1,4 +1,4 @@
-import { Skeleton } from '@/design-system';import React from 'react';
+import { Skeleton } from '@/design-system';
 // import Skeleton from '@/design-system/component/Skeleton';
 
 interface Post {

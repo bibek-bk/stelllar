@@ -2,7 +2,7 @@ import React from 'react';
 import { Avatar } from '@/design-system/components/Avatar/Avatar';
 import { Button } from '@/design-system/components/Button/Button';
 import Metrics from './Metrics';
-import { FollowButton } from '@/features/follow/FollowButton';
+import { FollowButton } from '@/features/follow/ui/FollowButton';
 import { Settings } from 'lucide-react';
 
 interface ProfileHeaderProps {

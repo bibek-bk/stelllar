@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ProfileHeader from '../components/ProfileHeader';
-import Bio from '../components/Bio';
+import ProfileHeader from '../ui/ProfileHeader';
+import Bio from '../ui/Bio';
 // import StoriesRow from './StoriesRow';
-import PostsReelsToggle from '../components/PostsReelsToggle';
-import ReelsPlaceholder from '../components/ReelsPlaceholder';
+import PostsReelsToggle from '../ui/PostsReelsToggle';
+import ReelsPlaceholder from '../ui/ReelsPlaceholder';
 import { useAuth } from '@/shared/hooks/useAuth';
-import UpdateProfile from '../components/UpdateProfile';
+import UpdateProfile from '../ui/UpdateProfile';
 import { useGetUserPosts, useProfileQuery } from '@/services/profiles/queries';
-import PostsGrid from '../components/PostsGrid';
-import SettingModal from '../components/SettingModal';
+import PostsGrid from '../ui/PostsGrid';
+import SettingModal from '../ui/SettingModal';
 
 interface User {
   avatar_url: string;

@@ -54,7 +54,7 @@ export const PostCard: React.FC<PostCardProps> = ({
         <div className="ml-3 flex-1">
           <div className="flex items-center">
             <button
-              className="font-semibold text-white hover:underline focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="font-semibold text-white hover:underline focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none focus-visible:rounded"
               aria-label={`View ${user.username}'s profile`}
               onClick={() => {
                 navigate(`/profile/${user.id}`);
@@ -62,14 +62,12 @@ export const PostCard: React.FC<PostCardProps> = ({
             >
               {user.username}
             </button>
-
-
           </div>
-          <p>{time}</p>
+          <p className="text-gray-400 text-sm">{time}</p>
         </div>
 
         <button
-          className="p-1 hover:bg-gray-800 rounded-full focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors"
+          className="p-1 hover:bg-gray-800 rounded-full focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none transition-colors"
           aria-label="More options"
         >
           <svg className="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">

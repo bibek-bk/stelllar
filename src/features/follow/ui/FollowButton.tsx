@@ -1,5 +1,5 @@
 import { UserPlus, Check } from "lucide-react";
-import { useToggleFollow } from "./hooks/useToggleFollow";
+import { useToggleFollow } from "../model/useToggleFollow";
 import { cn } from "@/design-system";
 import { Spinner } from "@/design-system/components/Spinner";
 
@@ -30,7 +30,7 @@ export const FollowButton: React.FC<FollowButtonProps> = ({
   };
 
   const baseClasses =
-    'w-full font-medium rounded-lg transition-all duration-200 flex items-center justify-center gap-2 disabled:cursor-not-allowed max-w-[300px] sm:max-w-[110px] min-w-[110px] w-full focus:ring-2 focus:ring-blue-500 focus:outline-none';
+    'w-full font-medium rounded-lg transition-all duration-200 flex items-center justify-center gap-2 disabled:cursor-not-allowed max-w-[300px] sm:max-w-[110px] min-w-[110px] w-full focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none';
 
   const variantClasses = isFollowing
     ? 'bg-gray-200 hover:bg-gray-300 text-gray-800'
