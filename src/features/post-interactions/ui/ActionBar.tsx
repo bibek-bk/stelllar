@@ -1,6 +1,5 @@
 
 import { LikeButton } from '@/features/post-interactions/like-post';
-import { useHasUserLikedPost } from '@/services/like/queries';
 
 interface ActionBarProps {
   postId: string;

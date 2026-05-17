@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { X, Image as ImageIcon, Loader2, Check } from 'lucide-react';
-import { useCreatePostFlow } from '@/features/create-post/hooks/useCreatePostFlow';
+import { useCreatePostFlow } from '@/features/create-post/model/useCreatePostFlow';
 import { Button } from '@/design-system/components/Button/Button';
 
 interface CreatePostModalProps {
